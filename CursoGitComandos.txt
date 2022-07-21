@@ -1,0 +1,41 @@
+git init :para hacer que git haga un seguimiento de nuestro proyecto como inicializar
+
+git add : para indicar a git a que archivos deseamos q haga seguimiento los lleva de nuestro directorio de trabajo a staging area(area de ensayo)
+
+git commit: traslada el archivo del area de ensayo al repositorio local y se crea el respaldo
+
+git status -s: Para ver el listado de todo lo que se tiene actualmente en el directorio OJO Solo en el directorio solo nos va mostrar los archivos que
+		estan en seguimiento (en el area de ensayo) y aquellos alos cuales no se les esta haciendo seguimiento, Y no va mostrar los que 
+		se encuentran ya en el repositorio local es decir los que han sufrido un commit.
+
+si te aparece ?? significa que solo estan en tu directorio los archivos
+si te aparece M significa que has echo un cambio que no esta guardado o respaldado
+
+git log --oneline para ver la lista de commits hasta la actualidad
+
+git reset --hard Codigo para resetear y volver a un commit anterior
+
+git commit -am "Parrafo y tamaño  de fuente" Hacer las instrucciones de add y comit al mismo tiempo
+
+git commit --amend editor vim para hacer cambios como por ejemplo en el nombre del commit
+
+SUBIR REPOSITORIO O EL PROYECTO A GITHUB
+git remote add origin https....
+git push -u origin master
+
+DIGAMOS SI HICISTE UN CAMBIO EN GITHUB(REPOSITORIO LOCAL) DIRECTAMENTE A UN ARCHIVO LO EDITASTE Y HICISTE COMMIT
+git pull :para traer los cambios o la informacion nueva ami directorio
+
+TAGS para manejar versiones del proyecto 
+git tag 06-28-22v1 -m "version 1 del proyecto" //crear el tag
+git push --tags //subir el tag
+
+CLONAR UN REPOSITORIO REMOTO DE GITHUB A MI DIRECTORIO LOCAL
+git clone https://github.com/BRUNO-RAMIREZ/CursoGit.git
+
+RAMAS O BRANCHS(Todos los cambios efectuados en otras ramas no se reflejan en la master a menos que hagas un merge)
+git branch nombreRama //crear rama
+git branch  //Ver las ramas que tenemos el asterisco indica donde estamos
+git checkout nombreRama//Moverse a otra rama
+git merge nombreRama //Fusionar dos ramas OJO siempre desde la rama master
+git branch -d nombreRama //Borrar rama
